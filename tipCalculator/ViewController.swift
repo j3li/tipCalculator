@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var billView: UIView!
+    
+    @IBOutlet weak var tipAndTotalView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,16 +31,14 @@ class ViewController: UIViewController {
         billField.becomeFirstResponder()
     }
 
-
-    @IBAction func onTap(_ sender: Any) {
-        view.endEditing(true)
-    }
+    @IBOutlet weak var tipBar: UINavigationItem!
+    
     
     @IBAction func calculateTip(_ sender: Any) {
         // Get bill amount
         let bill = Double(billField.text!) ?? 0
         // Calculate tip and total
-        let tipPercentages = [0.1, 0.18, 0.2]
+        let tipPercentages = [0.15, 0.18, 0.2]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         // Update tip and total labels
@@ -45,6 +46,10 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
     }
     
+    @IBAction func showTipAndTotal(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {self.tipAndTotalView.transform = CGAffineTransform(translationX: 0, y: -240); self.billView.transform = CGAffineTransform(translationX: 0, y: -150)
+        })
+    }
     
 }
 
