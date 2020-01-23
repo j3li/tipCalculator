@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var billView: UIView!
     
     @IBOutlet weak var tipAndTotalView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

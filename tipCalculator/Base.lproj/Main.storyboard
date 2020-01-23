@@ -85,9 +85,6 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="olv-h2-4ZL" appends="YES" id="cNW-o4-yOL"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="a9i-kG-MHQ"/>
                     <connections>
@@ -101,11 +98,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="olv-h2-4ZL">
-                    <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="AIE-6I-Qnx"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="olv-h2-4ZL"/>
             </objects>
             <point key="canvasLocation" x="1040.8" y="100.29985007496252"/>
         </scene>
